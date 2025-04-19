@@ -1,11 +1,19 @@
-//console.log("Button clicking file added")
-
-// step-1 set event handler
 document.getElementById('button-login').addEventListener('click', function(event){
-    // step-2 prevent default behaviour(prevent reloading browser)
-    event.preventDefault(); 
-    console.log('Login button clicked');
+    event.preventDefault();
+
+    const phone = document.getElementById('phone').value;
+    const pin = document.getElementById('pin').value;
+
+    console.log('Phone:', phone);
+    console.log('PIN:', pin);
+
+    // step-4 validate phone and pin
+    // this is temporary.. you should not use this
+    if(phone === '5' && pin === '1234'){
+        console.log('You are logged in');
+        window.location.href = 'home.html';
+    }
+    else{
+        alert('Wrong phone number or pin');
+    }
 });
-// step-3 get the phone number
-const phoneNumber = document.getElementById('phone-number').value ;
-console.log(phoneNumber);
