@@ -8,7 +8,10 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<main class="flex justify-center">
+
+
+<body>
+  <main class="flex justify-center">
     <div class="mockup-phone bg-gray-100">
         <div class="mockup-phone-camera"></div>
         <div class="mockup-phone-display text-black grid place-content-center">
@@ -16,7 +19,7 @@
       <div>
         <div class="stats shadow">
             <div class="stat">
-              <div class="stat-value">9,400</div>
+              <div id="account-Balance" class="stat-value">9400</div>
               <div class="stat-desc">Available Balance</div>
             </div>
           </div>
@@ -25,12 +28,12 @@
       <div class="divider"></div>
       <!-- User action button -->
        <div>
-        <button class="btn btn-lg">Add Money</button>
-        <button class="btn btn-lg">Cash Out</button>
+        <button id="btn-show-add-money-form" class="btn btn-lg">Add Money</button>
+        <button id="btn-show-cash-out" class="btn btn-lg">Cash Out</button>
        </div>
        <div class="divider"></div>
        <!-- Add money Form Start-->
-<div class="hero bg-base-200 p-4 rounded-xl">
+<div id="add-money-form" class=  " hero bg-base-200 p-4 rounded-xl">
     <div class="hero-content flex-col">
       <h1 class="text-2xl font-bold text-center">Login now!</h1>
       <p class="py-4 text-sm text-center">
@@ -53,7 +56,31 @@
     </div>
   </div>
   <!-- Add money form end -->
+   
+  <!-- Cash out Start -->
+  <div id="cash-out-form" class="hidden hero bg-base-200 p-4 rounded-xl">
+    <div class="hero-content flex-col">
+      <h1 class="text-2xl font-bold text-center">Login now!</h1>
+      <p class="py-4 text-sm text-center">
+        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+        quasi. In deleniti eaque aut repudiandae et a id nisi.
+      </p>
   
+      <div class="card bg-base-100 w-full max-w-xs shadow-xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label">Amount</label>
+            <input id="input-cash-out" type="text" class="input input-bordered" placeholder="Cash out Amount" />
+            <label class="label">Pin</label>
+            <input id="input-cash-out-pin" type="password" class="input input-bordered" placeholder="Pin number" />
+           
+            <button  id="btn-cash-out" class="btn btn-primary mt-4 w-full">Cash Out</button>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Cash out End -->
 
         </div>
        
@@ -61,7 +88,10 @@
      
 </main>
 
-<body>
-    <script src="js/home.js"></script>
+
+    <!-- <script src="js/home.js"></script> -->
+     <script src="js/addmoney.js"></script>
+     <script src="js/cash-out.js"></script>
+     <script src="js/features.js"></script>
 </body>
 </html>
